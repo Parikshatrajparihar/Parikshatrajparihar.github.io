@@ -1,1 +1,992 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Parikshat Raj Parihar | Cyber Security Analyst</title>
+
+<meta name="description" content="Parikshat Raj Parihar — Security Analyst specializing in Cybersecurity, Cloud & Network Security, Threat Analysis, Vulnerability Assessment and Penetration Testing.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#050912;
+    --card:#0b1220;
+    --card2:#0f1928;
+    --green:#00ff9d;
+    --blue:#00b7ff;
+    --text:#f4f7fb;
+    --muted:#91a0b3;
+    --border:#1c2a3d;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(5,9,18,.9);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:var(--green);
+    font-size:21px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:#aab6c6;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:var(--green);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:70px;
+    background:
+    radial-gradient(circle at 50% 20%,#09253a 0%,transparent 35%),
+    var(--bg);
+}
+
+.hero-content{
+    text-align:center;
+    width:100%;
+}
+
+.status{
+    display:inline-block;
+    padding:7px 16px;
+    border:1px solid var(--green);
+    border-radius:30px;
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.avatar{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    margin:0 auto 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:bold;
+    color:var(--green);
+    border:2px solid var(--green);
+    background:#07131c;
+    box-shadow:0 0 35px rgba(0,255,157,.18);
+}
+
+.hero h1{
+    font-size:clamp(40px,7vw,72px);
+    line-height:1.05;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero h2{
+    color:#b7c4d4;
+    font-size:clamp(18px,3vw,27px);
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:760px;
+    margin:auto;
+    color:var(--muted);
+    font-size:16px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 24px;
+    border-radius:7px;
+    font-weight:bold;
+    border:1px solid var(--green);
+}
+
+.primary{
+    background:var(--green);
+    color:#03120b;
+}
+
+.secondary{
+    color:var(--green);
+}
+
+.secondary:hover{
+    background:var(--green);
+    color:#03120b;
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.section-title span{
+    color:var(--green);
+}
+
+.line{
+    width:65px;
+    height:3px;
+    background:var(--green);
+    margin-bottom:35px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.4fr .8fr;
+    gap:30px;
+}
+
+.about-text{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.info-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:25px;
+}
+
+.info-row{
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.info-row:last-child{
+    border-bottom:0;
+}
+
+.info-row strong{
+    color:white;
+}
+
+.info-row span{
+    color:var(--muted);
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.stat{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat h3{
+    color:var(--green);
+    font-size:30px;
+}
+
+.stat p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    border-left:2px solid var(--green);
+    margin-left:10px;
+    padding-left:30px;
+}
+
+.job{
+    position:relative;
+    margin-bottom:45px;
+}
+
+.job:before{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:var(--green);
+    left:-38px;
+    top:7px;
+}
+
+.job h3{
+    font-size:21px;
+}
+
+.company{
+    color:var(--green);
+    margin:4px 0;
+}
+
+.date{
+    color:#748398;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.job p{
+    color:var(--muted);
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:13px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--green);
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:10px 15px;
+    border-radius:7px;
+    color:#b9c6d5;
+}
+
+.skill:hover{
+    border-color:var(--green);
+    color:var(--green);
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    background:linear-gradient(135deg,#091827,#07111d);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:55px 20px;
+}
+
+.contact-box p{
+    color:var(--muted);
+    max-width:650px;
+    margin:12px auto;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:30px 20px;
+    color:#68778a;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .menu{
+        display:none;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+}
+
+@media(max-width:450px){
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat h3{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav">
+
+<div class="logo">
+&lt;<span>PRP</span> /&gt;
+</div>
+
+<div class="menu">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container hero-content">
+
+<div class="status">
+● AVAILABLE FOR PROFESSIONAL OPPORTUNITIES
+</div>
+
+<div class="avatar">
+PR
+</div>
+
+<h1>
+Parikshat Raj <span>Parihar</span>
+</h1>
+
+<h2>
+Security Analyst | Cloud & Network Security | Threat Analysis
+</h2>
+
+<p>
+Cybersecurity professional focused on vulnerability assessment,
+penetration testing, security operations, threat analysis,
+network security and vulnerability research.
+</p>
+
+<div class="buttons">
+
+<a href="#experience" class="btn primary">
+View Experience
+</a>
+
+<a href="#contact" class="btn secondary">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+I am a Security Analyst with experience across cybersecurity,
+cloud and network security, vulnerability assessment,
+penetration testing and threat analysis.
+</p>
+
+<br>
+
+<p>
+My technical interests include security operations, ethical
+hacking, web application security, network security,
+vulnerability research and security automation.
+</p>
+
+<br>
+
+<p>
+I also work on cybersecurity learning, technical research and
+hands-on security labs to continuously improve my offensive and
+defensive security capabilities.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-row">
+<strong>Role</strong><br>
+<span>Security Analyst</span>
+</div>
+
+<div class="info-row">
+<strong>Focus</strong><br>
+<span>Cyber & Network Security</span>
+</div>
+
+<div class="info-row">
+<strong>Specialization</strong><br>
+<span>VAPT & Threat Analysis</span>
+</div>
+
+<div class="info-row">
+<strong>Location</strong><br>
+<span>India</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<h3>2025</h3>
+<p>Google Security Analyst</p>
+</div>
+
+<div class="stat">
+<h3>CEH</h3>
+<p>Certified Ethical Hacker</p>
+</div>
+
+<div class="stat">
+<h3>9.5K+</h3>
+<p>LinkedIn Followers</p>
+</div>
+
+<div class="stat">
+<h3>Cyber</h3>
+<p>Security Focus</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+Professional <span>Experience</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="timeline">
+
+
+<div class="job">
+
+<h3>Security Analyst</h3>
+
+<div class="company">
+Google · Full-time
+</div>
+
+<div class="date">
+Jul 2025 – Present · Bengaluru · On-site
+</div>
+
+<p>
+Security-focused work involving vulnerability assessment,
+penetration testing, threat analysis, cloud and network security
+and cybersecurity operations.
+</p>
+
+</div>
+
+
+<div class="job">
+
+<h3>PPS International Infotech</h3>
+
+<div class="company">
+PPS International · Professional Experience
+</div>
+
+<div class="date">
+Mar 2025 – Jul 2025 · Greater Noida · On-site
+</div>
+
+<p>
+Worked in a technical environment with exposure to IT,
+security and infrastructure-related activities.
+</p>
+
+</div>
+
+
+<div class="job">
+
+<h3>Cybersecurity / IT Freelancer</h3>
+
+<div class="company">
+HCLTech · Freelance
+</div>
+
+<div class="date">
+Dec 2023 – Jul 2025 · Remote
+</div>
+
+<p>
+Worked on technical and cybersecurity-related assignments
+including security research, troubleshooting and IT security
+activities.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">
+Education & <span>Training</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Master of Business Administration</h3>
+
+<p>
+<strong>Sharda University</strong>
+</p>
+
+<p>
+Jul 2025 – Jul 2027
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>B.Sc. Computer Science</h3>
+
+<p>
+<strong>Mohanlal Sukhadia University</strong>
+</p>
+
+<p>
+2020 – 2023
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Cybersecurity</h3>
+
+<p>
+<strong>Snap Education</strong>
+</p>
+
+<p>
+May 2024 – May 2025 · Grade A
+</p>
+
+<p>
+Cybersecurity, Ethical Hacking & Networking
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Certified Ethical Hacker</h3>
+
+<p>
+<strong>IANT – Institute of Advance Network Technology</strong>
+</p>
+
+<p>
+Aug 2024 – Jan 2025 · Grade A
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Professional <span>Certifications</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="cards">
+
+<div class="card">
+<h3>CEH</h3>
+<p>Certified Ethical Hacker</p>
+</div>
+
+<div class="card">
+<h3>GIAC</h3>
+<p>GIAC Certification</p>
+</div>
+
+<div class="card">
+<h3>CISSP</h3>
+<p>CISSP — Associate Level</p>
+</div>
+
+<div class="card">
+<h3>IANT</h3>
+<p>Certified Ethical Hacker · Grade A</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+Technical <span>Skills</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="skills">
+
+<div class="skill">Cybersecurity</div>
+<div class="skill">SOC Operations</div>
+<div class="skill">Threat Analysis</div>
+<div class="skill">Vulnerability Assessment</div>
+<div class="skill">Penetration Testing</div>
+<div class="skill">Web Security</div>
+<div class="skill">Network Security</div>
+<div class="skill">Cloud Security</div>
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Linux</div>
+<div class="skill">Kali Linux</div>
+<div class="skill">Parrot OS</div>
+<div class="skill">Burp Suite</div>
+<div class="skill">Nmap</div>
+<div class="skill">Wireshark</div>
+<div class="skill">Metasploit</div>
+<div class="skill">SQLmap</div>
+<div class="skill">OSINT</div>
+<div class="skill">Network Analysis</div>
+<div class="skill">Security Research</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Security <span>Projects & Research</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="cards">
+
+
+<div class="card">
+<h3>Vulnerability Research</h3>
+<p>
+Researching and documenting security vulnerabilities in
+authorized applications and platforms using responsible
+disclosure practices.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Web Application Security</h3>
+<p>
+Hands-on security testing involving reconnaissance,
+enumeration, vulnerability identification and validation.
+</p>
+</div>
+
+
+<div class="card">
+<h3>SOC & Threat Analysis</h3>
+<p>
+Security monitoring, log analysis, threat identification and
+incident investigation workflows.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Network Security</h3>
+<p>
+Network reconnaissance, service enumeration, traffic analysis
+and security assessment using industry tools.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Bug Bounty Research</h3>
+<p>
+Security research focused on identifying and responsibly
+reporting vulnerabilities within authorized bug bounty programs.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Security Automation</h3>
+<p>
+Exploring Python, scripting and automation techniques for
+security analysis and repetitive security workflows.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Professional <span>Services</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="skills">
+
+<div class="skill">Cybersecurity</div>
+<div class="skill">Information Security</div>
+<div class="skill">IT Consulting</div>
+<div class="skill">Network Support</div>
+<div class="skill">Data Recovery</div>
+<div class="skill">Backup & Recovery</div>
+<div class="skill">Security Research</div>
+<div class="skill">Vulnerability Assessment</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Professional <span>Profiles</span>
+</h2>
+
+<div class="line"></div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>LinkedIn</h3>
+
+<p>
+Security and technology content, professional updates and
+cybersecurity knowledge sharing.
+</
